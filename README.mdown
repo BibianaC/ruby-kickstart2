@@ -1,3 +1,6 @@
+
+Challenges of RubyKickstart done in this repository. 
+
 Welcome to RubyKickstart!
 =========================
 
