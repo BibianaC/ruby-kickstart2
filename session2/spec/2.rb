@@ -30,9 +30,9 @@ def sum(ary)
 end
 
 def hi_hi_goodbye_tester( inputs = Array.new )
-  output = input_output("#{inputs.join "\n"}\nbye\n") { hi_hi_goodbye }
+  output = input_output("#{inputs.join "\n"}\nbye\n\n") { hi_hi_goodbye }
   output.scan(HI_REGEX).length.should == sum(inputs)
-  (!!output[BYE_REGEX]).should be_true
+  (!!output[BYE_REGEX]).should eq true
 end
 
 describe 'hi_hi_goodbye' do
