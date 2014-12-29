@@ -5,3 +5,12 @@
 # get_squares [9,3]                    # => [3]
 # get_squares [9,3,81]                 # => [3, 9]
 # get_squares [25, 4, 9, 6, 50, 16, 5] # => [4, 5]
+
+def get_squares(arr)
+	result = []
+	arr.each do |num|
+		result << num if arr.include? num ** 2
+	end
+	result.sort!
+	return result
+end
