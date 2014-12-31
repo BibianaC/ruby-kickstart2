@@ -14,3 +14,15 @@
 # prime_chars? ['ab', 'cd']       # => false
 # prime_chars? ['a', 'bcd']       # => false
 # prime_chars? ['a', 'b', 'cd']   # => false
+
+def is_prime?(num)
+	return false if num < 2
+	(2..Math.sqrt(num)).each do |i| 
+		return false if num % i == 0
+	end
+    true
+end
+
+def prime_chars?(arr)
+	is_prime? arr.join.length
+end
