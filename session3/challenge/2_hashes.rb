@@ -8,3 +8,12 @@
 # staircase 4  # => { 1 => [], 3 => [2] }
 # staircase 5  # => { 1 => [], 3 => [2], 5 =>[2, 4] }
 
+def staircase(num)
+	result = Hash.new
+	1.upto(num) do |x|
+		if x.odd?
+			result[x] = 1.upto(x).select {|y| y.even?}
+		end
+	end
+	return result
+end
